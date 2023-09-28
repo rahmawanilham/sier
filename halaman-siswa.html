@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>e-raport | SDN Manisrejo</title>
+    <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="frontend/custom/css/style.css" />
+  </head>
+  <body>
+    <div class="w-100 container-fluid main-data d-flex justify-content-center position-relative vh-100">
+      <div class="container sidenav my-3 ms-3 p-0 py-2">
+        <div class="profile text-center">
+          <img src="frontend/assets/logo.jpg" class="img-thumbnail mt-4 rounded-circle" alt="..." />
+          <p class="my-3 fw-semibold">Siswa</p>
+        </div>
+        <div class="action px-2">
+          <a href="#raport" class="btn-sidenav active text-nowrap"><i class="bi bi-book-fill me-3"></i>Lihat Raport</a>
+          <a href="#profil" class="btn-sidenav text-nowrap"><i class="bi bi-person-fill me-3"></i>Lihat Profil</a>
+          <a href="" class="btn-sidenav text-nowrap"><i class="bi bi-box-arrow-left me-3"></i>Logout</a>
+        </div>
+      </div>
+
+      <div class="container-fluid content-center position-relative d-flex justify-content-start align-items-strech flex-column overflow-auto">
+        <section>
+          <nav class="nav-top navbar navbar-expand-lg px-3">
+            <div class="container-fluid flex-nowrap">
+              <div class="logo-nav row">
+                <h1 class="fw-semibold">e-Raport</h1>
+                <p class="mt-2 text-nowrap">SDN Manisrejo 1</p>
+              </div>
+              <div class="dropdown position-relative">
+                <button class="dropbtn fw-semibold"><i class="bi bi-person-fill me-2"></i>Siswa</button>
+                <div class="dropdown-content position-absolute">
+                  <a href="#profil" class=""><i class="bi bi-person-fill me-3"></i>Lihat Profil</a>
+                  <a href="" class=""><i class="bi bi-box-arrow-left me-3"></i>Logout</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </section>
+
+        <div class="button-sidenav text-start ms-4 mt-3">
+          <i class="fs-2 bi bi-list"></i>
+        </div>
+
+        <section id="raport" class="container-fluid content-data active overflow-auto">
+          <nav class="navbar position-sticky top-0 z-1 py-3">
+            <div class="flex-nowrap">
+              <div class="row">
+                <a class="navbar-brand"><h3>Raport Siswa</h3></a>
+              </div>
+            </div>
+          </nav>
+          <section class="profile-menu-wrap overflow-auto">
+            <div class="container-fluid box-data p-3 ps-5 position-sticky top-0 mb-4">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row data nis">
+                    <p class="col mb-1">No Induk Siswa</p>
+                    <p class="col nis">2312</p>
+                  </div>
+                  <div class="row data nama-siswa">
+                    <p class="col mb-1">Nama Siswa</p>
+                    <p class="col nama-siswa">Dhea Adira</p>
+                  </div>
+                  <div class="row data ttl">
+                    <p class="col mb-1">Tempat Tanggal Lahir</p>
+                    <p class="col ttl-siswa">Madiun 13 April 2018</p>
+                  </div>
+                  <div class="row data ttl">
+                    <p class="col mb-1">Sekolah</p>
+                    <p class="col ttl-siswa">SDN 01 Manisrejo</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row data kelas-siswa">
+                    <p class="col mb-1">Kelas</p>
+                    <p class="col kelas-siswa">3B</p>
+                  </div>
+                  <div class="row data wali-kelas">
+                    <p class="col mb-1">Wali Kelas</p>
+                    <p class="col wali-kelas">Endang Sunarsih S.Pd</p>
+                  </div>
+                  <div class="row data semester">
+                    <p class="col mb-1">Semester</p>
+                    <p class="col wali-kelas">2</p>
+                  </div>
+                  <div class="row data tahun-pelajaran">
+                    <p class="col mb-1">Tahun Pelajaran</p>
+                    <p class="col wali-kelas">2020/2023</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabel">
+              <div class="table-responsive">
+                <table class="table table-borderless table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Mata Pelajaran</th>
+                      <th scope="col">KKM</th>
+                      <th scope="col">Angka</th>
+                      <th scope="col">Huruf</th>
+                      <th scope="col">Deskripsi Belajar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Pendidikan Agama</td>
+                      <td>75</td>
+                      <td>81</td>
+                      <td>Delapan Puluh Satu</td>
+                      <td>KKM Terpenuhi</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Ilmu Pengetahuan Sosial</td>
+                      <td>75</td>
+                      <td>81</td>
+                      <td>Delapan Puluh Satu</td>
+                      <td>KKM Terpenuhi</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Ilmu Pengetahuan Alam</td>
+                      <td>75</td>
+                      <td>81</td>
+                      <td>Delapan Puluh Satu</td>
+                      <td>KKM Terpenuhi</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Matematik</td>
+                      <td>75</td>
+                      <td>81</td>
+                      <td>Delapan Puluh Satu</td>
+                      <td>KKM Terpenuhi</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Bahasa Indonesia</td>
+                      <td>75</td>
+                      <td>81</td>
+                      <td>Delapan Puluh Satu</td>
+                      <td>KKM Terpenuhi</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Bahasa Inggris</td>
+                      <td>75</td>
+                      <td>81</td>
+                      <td>Delapan Puluh Satu</td>
+                      <td>KKM Terpenuhi</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="btn-download-raport">Download Raport</button>
+            </div>
+          </section>
+        </section>
+
+        <section id="profil" class="container-fluid content-data overflow-auto">
+          <nav class="navbar position-sticky top-0 z-1 py-3">
+            <div class="flex-nowrap">
+              <div class="row">
+                <a class="navbar-brand"><h3>Data Diri Siswa</h3></a>
+              </div>
+            </div>
+          </nav>
+          <section class="profile-menu-wrap overflow-auto">
+            <div class="container-fluid box-data p-3 ps-5 position-sticky top-0 mb-4">
+              <div class="row mb-4">
+                <h3 class="mb-3">Data Siswa</h3>
+                <div class="col-md-4">
+                  <div class="row data">
+                    <p class="col mb-1">No Induk Siswa</p>
+                    <p class="col nis">2312</p>
+                  </div>
+                  <div class="row data">
+                    <p class="col mb-1">Nama Siswa</p>
+                    <p class="col nama-siswa">Dhea Adira</p>
+                  </div>
+                  <div class="row data">
+                    <p class="col mb-1">Tempat Tanggal Lahir</p>
+                    <p class="col ttl-siswa">Madiun 13 April 2018</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row data">
+                    <p class="col mb-1">Jenis Kelamin</p>
+                    <p class="col jenis-kelamin-siswa">Perempuan</p>
+                  </div>
+                  <div class="row data">
+                    <p class="col mb-1">Kelas</p>
+                    <p class="col kelas-siswa">3B</p>
+                  </div>
+                  <div class="row data">
+                    <p class="col mb-1">Wali Kelas</p>
+                    <p class="col wali-kelas">Endang Sunarsih S.Pd</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="position-sticky top-100 text-center py-4 text-secondary">
+          <div class="footer">
+            <p class="copyright-year">Copyright <span>2023</span> - SDN Manisrejo 1</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="frontend/js/bootstrap.min.js"></script>
+    <script src="frontend/custom/js/app.js"></script>
+    <script src="frontend/custom/js/tab.js"></script>
+  </body>
+</html>

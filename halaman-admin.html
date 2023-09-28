@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>e-raport | SDN Manisrejo</title>
+    <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="frontend/custom/css/style.css" />
+  </head>
+  <body>
+    <div class="w-100 container-fluid main-data d-flex justify-content-center position-relative vh-100">
+      <div class="container sidenav my-3 ms-3 p-0 py-2">
+        <div class="profile text-center">
+          <img src="frontend/assets/logo.jpg" class="img-thumbnail mt-4 rounded-circle" alt="..." />
+          <p class="my-3 fw-semibold">Administrator</p>
+        </div>
+        <div class="action px-2">
+          <a href="#dataGuru" class="btn-sidenav active text-nowrap"><i class="bi bi-person-workspace me-3"></i>Data Guru</a>
+          <a href="#dataSiswa" class="btn-sidenav text-nowrap"><i class="bi bi-person-fill me-3"></i>Data Siswa</a>
+          <a href="#dataMapel" class="btn-sidenav text-nowrap"><i class="bi bi-book-fill me-3"></i>Data Mata Pelajaran</a>
+          <a href="index.html" class="btn-sidenav text-nowrap"><i class="bi bi-box-arrow-left me-3"></i>Logout</a>
+        </div>
+      </div>
+
+      <div class="container-fluid content-center position-relative d-flex justify-content-start align-items-strech flex-column overflow-auto">
+        <section>
+          <nav class="nav-top navbar navbar-expand-lg px-3">
+            <div class="container-fluid flex-nowrap">
+              <div class="logo-nav row">
+                <h1 class="fw-semibold">e-Raport</h1>
+                <p class="mt-2 text-nowrap">SDN Manisrejo 1</p>
+              </div>
+              <div class="dropdown position-relative">
+                <button class="dropbtn fw-semibold"><i class="bi bi-person-fill me-2"></i>Administrator</button>
+                <div class="dropdown-content position-absolute">
+                  <a href="" class=""><i class="bi bi-box-arrow-left me-3"></i>Logout</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </section>
+
+        <div class="button-sidenav text-start ms-4 mt-3">
+          <i class="fs-2 bi bi-list"></i>
+        </div>
+
+        <section id="dataGuru" class="container-fluid content-data active overflow-auto">
+          <nav class="navbar py-3">
+            <div class="container-fluid flex-nowrap">
+              <div class="row">
+                <h3>Kelola Data Guru</h3>
+              </div>
+              <form class="cari d-flex" role="search" action="" method="post">
+                <input class="cari-data guru form-control me-2" type="search" placeholder="Cari nama guru..." aria-label="Search" />
+              </form>
+            </div>
+          </nav>
+
+          <div class="data-admin-wrap">
+            <div class="tabel">
+              <!-- btn tambah data -->
+              <button type="button" class="btn btn-primary bi bi-plus mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdropDataGuru">Tambah Data Guru</button>
+
+              <!-- tambah data -->
+              <div class="modal fade modal-lg text-secondary" id="staticBackdropDataGuru" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Tambah data guru</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="" method="post">
+                      <div class="modal-body">
+                        <div class="table-responsive">
+                          <div class="tabel">
+                            <div class="table-responsive">
+                              <table class="table table-borderless table-striped">
+                                <tbody>
+                                  <tr class="align-middle bg-dark">
+                                    <th>NIP</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="number" placeholder="Isi data NIP" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Nama Guru</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi nama guru" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Jenis Kelamin</th>
+                                    <td class="text-start">
+                                      <select value="jenis-kelamin-guru">
+                                        <option name="laki-laki" id="" for="jenis-kelamin-guru">Laki-laki</option>
+                                        <option name="perempuan" id="" for="jenis-kelamin-guru">Perempuan</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Alamat</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi data alamat" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Email</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi data email" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Password Akun</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi data password" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Peran</th>
+                                    <td class="text-start">
+                                      <select value="peran">
+                                        <option name="laki-laki" id="" for="peran">Guru Kelas</option>
+                                        <option name="perempuan" id="" for="peran">Guru Mulok</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Pengampu Kelas</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi data kelas" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Pengampu Mapel</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi data kelas" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- edit data -->
+              <div class="table-wrap table-responsive">
+                <div class="modal fade modal-lg" id="staticBackdropEditGuru" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Edit data guru</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <form action="" method="post">
+                        <div class="modal-body">
+                          <div class="table-responsive">
+                            <div class="tabel">
+                              <div class="table-responsive">
+                                <table class="table table-borderless table-striped">
+                                  <tbody>
+                                    <tr class="align-middle">
+                                      <th>NIP</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="number" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Nama Guru</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Jenis Kelamin</th>
+                                      <td class="text-start">
+                                        <select value="jenis-kelamin-guru">
+                                          <option name="laki-laki" id="" for="jenis-kelamin-guru">Laki-laki</option>
+                                          <option name="perempuan" id="" for="jenis-kelamin-guru">Perempuan</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Alamat</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Email</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Password Akun</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Peran</th>
+                                      <td class="text-start">
+                                        <select value="peran">
+                                          <option name="laki-laki" id="" for="peran">Guru Kelas</option>
+                                          <option name="perempuan" id="" for="peran">Guru Mulok</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Pengampu Kelas</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Pengampu Mapel</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Lihat Data -->
+                <div class="modal fade modal-xl" id="staticBackdropLihatGuru" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Detail data guru</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <section class="profile-menu-wrap overflow-auto">
+                          <div class="container-fluid box-data p-3 ps-5 position-sticky top-0 mb-4">
+                            <div class="row mb-4">
+                              <div class="col-md-6">
+                                <div class="row data">
+                                  <p class="col-4 mb-1">No Induk Pegawai</p>
+                                  <p class="col-8 nip">20051024</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Nama Guru</p>
+                                  <p class="col-8 nama-guru">Djunaidi Wahyu Eko Purnomo S.Pd</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Alamat</p>
+                                  <p class="col-8 alamat-guru">Ds.Sendang Rejo Kec. Nglames Kab. Madiun</p>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Jenis Kelamin</p>
+                                  <p class="col-8 jenis-kelamin-guru">Laki-laki</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Emial</p>
+                                  <p class="col-8 email">junaidi2032@email.com</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Peran</p>
+                                  <p class="col-8 peran">Guru Kelas</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                      <div class="modal-footer"></div>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-borderless table-striped show">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">NIP</th>
+                      <th scope="col">Nama Guru</th>
+                      <th scope="col">Jenis Kelamin</th>
+                      <th scope="col">Alamat</th>
+                      <th scope="col">Email</th>
+                      <th scope="col" class="text-center">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th>20051024</th>
+                      <td>Djunaidi Wahyu Eko Purnomo S.Pd</td>
+                      <td>Laki-laki</td>
+                      <td>DS. Sidomulyo Kec. Sawahan Kab. Madiun</td>
+                      <td>junaidi2032@email.com</td>
+                      <td class="text-center text-nowrap">
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropLihatGuru">Lihat Data</a>
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropEditGuru">Edit Data</a>
+                        <a href="" type="button" class="mx-1 text-danger">Hapus Data</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th>20051024</th>
+                      <td>Intan Nur Mualiza</td>
+                      <td>Perempuan</td>
+                      <td>DS. Sidomulyo Kec. Sawahan Kab. Madiun</td>
+                      <td>intan222@email.com</td>
+                      <td class="text-center text-nowrap">
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropLihatGuru">Lihat Data</a>
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropEditGuru">Edit Data</a>
+                        <a href="" type="button" class="mx-1 text-danger">Hapus Data</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="dataSiswa" class="container-fluid content-data overflow-auto">
+          <nav class="navbar py-3">
+            <div class="container-fluid flex-nowrap">
+              <div class="row">
+                <h3>Kelola Data Siswa</h3>
+              </div>
+              <form class="cari d-flex" role="search" action="" method="post">
+                <input class="cari-data form-control me-2" type="search" placeholder="Cari nama siswa..." aria-label="Search" />
+              </form>
+            </div>
+          </nav>
+
+          <div class="data-admin-wrap">
+            <div class="tabel">
+              <!-- tambah data -->
+              <button type="button" class="btn btn-primary bi bi-plus mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdropDataSiswa">Tambah Data Siswa</button>
+
+              <!-- tambah data -->
+              <div class="modal fade modal-lg text-secondary" id="staticBackdropDataSiswa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Tambah data siswa</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="" method="post">
+                      <div class="modal-body">
+                        <div class="table-responsive">
+                          <div class="tabel">
+                            <div class="table-responsive">
+                              <table class="table table-borderless table-striped">
+                                <tbody>
+                                  <tr class="align-middle">
+                                    <th>NIS</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="number" placeholder="Isi data NIP" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Nama Siswa</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi nama siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Jenis Kelamin</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi jenis kelamin siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Tempat Lahir</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi tempat tanggal lahir siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Tanggal Lahir</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi tempat tanggal lahir siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Alamat Siswa</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi alamat siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Nama Orang Tua/Wali</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi nama orang tua" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="table-wrap table-responsive">
+                <!-- edit data -->
+                <div class="modal fade modal-lg" id="staticBackdropEditSiswa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Edit data siswa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <form action="" method="post">
+                        <div class="modal-body">
+                          <div class="table-responsive">
+                            <div class="tabel">
+                              <div class="table-responsive">
+                                <table class="table table-borderless table-striped show">
+                                  <tbody>
+                                    <tr class="align-middle">
+                                      <th>NIS</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="number" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Nama Siswa</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Jenis Kelamin</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Tempat Lahir</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Tanggal Lahir</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Alamat Siswa</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Nama Orang Tua/Wali</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- lihat data -->
+                <div class="modal fade modal-xl" id="staticBackdropLihatSiswa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Detail data siswa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+                        <section class="profile-menu-wrap overflow-auto">
+                          <div class="container-fluid box-data p-3 ps-5 position-sticky top-0 mb-4">
+                            <div class="row mb-4">
+                              <div class="col-md-6">
+                                <div class="row data">
+                                  <p class="col-4 mb-1">No Induk Siswa</p>
+                                  <p class="col-8 nis">20051024</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Nama Siswa</p>
+                                  <p class="col-8 nama-siswa">Dhea Adira</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Alamat</p>
+                                  <p class="col-8 alamat-siswa">Ds. Babadan Lor Kec. Balerejo Kab. Madiun</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Tempat Lahir</p>
+                                  <p class="col-8 tempat-lahir">Madiun</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Tanggal Lahir</p>
+                                  <p class="col-8 tanggal-lahir-siswa">13 April 2018</p>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Kelas</p>
+                                  <p class="col-8 kelas">3A</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Jenis Kelamin</p>
+                                  <p class="col-8 jenis-kelamin-siswa">Perempuan</p>
+                                </div>
+                                <div class="row data">
+                                  <p class="col-4 mb-1">Orang Tua/Wali</p>
+                                  <p class="col-8 wali-siswa">Sujatmiko</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                      <div class="modal-footer"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="table table-borderless table-striped show">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">NIS</th>
+                      <th scope="col">Nama Siswa</th>
+                      <th scope="col">Jenis Kelamin</th>
+                      <th scope="col">Kelas</th>
+                      <th scope="col">Alamat</th>
+                      <th scope="col" class="text-center">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th>2312</th>
+                      <td>Dhea Adira</td>
+                      <td>Perempuan</td>
+                      <td>3A</td>
+                      <td>Ds. Babadan Lor Kec. Balerejo Kab. Madiun</td>
+                      <td class="text-center text-nowrap">
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropLihatSiswa">Lihat Data</a>
+                        <!-- edit data -->
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropEditSiswa">Edit Data</a>
+                        <a href="" type="button" class="mx-1 text-danger">Hapus Data</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th>2312</th>
+                      <td>Wahyu Anggoro</td>
+                      <td>Laki-laki</td>
+                      <td>1A</td>
+                      <td>Ds. Babadan Lor Kec. Balerejo Kab. Madiun</td>
+                      <td class="text-center text-nowrap">
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropLihatSiswa">Lihat Data</a>
+                        <!-- edit data -->
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropEditSiswa">Edit Data</a>
+                        <a href="" type="button" class="mx-1 text-danger">Hapus Data</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="dataMapel" class="container-fluid content-data overflow-auto">
+          <nav class="navbar py-3">
+            <div class="container-fluid flex-nowrap">
+              <div class="row">
+                <h3>Kelola Data Pelajaran</h3>
+              </div>
+              <form class="cari d-flex" role="search" action="" method="post">
+                <input class="cari-data form-control me-2" type="search" placeholder="Cari mata pelajaran..." aria-label="Search" />
+              </form>
+            </div>
+          </nav>
+
+          <div class="data-admin-wrap">
+            <div class="tabel">
+              <!-- btn tambah data -->
+              <button type="button" class="btn btn-primary bi bi-plus mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdropDataMapel">Tambah Data Pelajaran</button>
+
+              <!-- tambah data -->
+              <div class="modal fade modal-md" id="staticBackdropDataMapel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Tambah data pelajaran</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="" method="post">
+                      <div class="modal-body">
+                        <div class="table-responsive">
+                          <div class="tabel">
+                            <div class="table-responsive">
+                              <table class="table table-borderless table-striped">
+                                <tbody>
+                                  <tr class="align-middle">
+                                    <th>Kode Mata Pelajaran</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi kode mata pelajaran siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Mata Pelajaran</th>
+                                    <td class="text-start">
+                                      <input class="form-control me-2" type="text" placeholder="Isi nama mata pelajaran siswa" style="font-size: 14px" />
+                                    </td>
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <th>Jenis Mata Pelajaran</th>
+                                    <td class="text-start">
+                                      <select value="jenis-pelajaran">
+                                        <option value="normatif">Normatif</option>
+                                        <option value="normatif">Muatan Lokal</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- edit data -->
+              <div class="table-wrap table-responsive">
+                <div class="modal fade modal-md" id="staticBackdropEditMapel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Edit data pelajaran</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <form action="" method="post">
+                        <div class="modal-body">
+                          <div class="table-responsive">
+                            <div class="tabel">
+                              <div class="table-responsive">
+                                <table class="table table-borderless table-striped">
+                                  <tbody>
+                                    <tr class="align-middle">
+                                      <th>Kode Mata Pelajaran</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Mata Pelajaran</th>
+                                      <td class="text-start">
+                                        <input class="form-control me-2" type="text" style="font-size: 14px" />
+                                      </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                      <th>Jenis Mata Pelajaran</th>
+                                      <td class="text-start">
+                                        <select value="jenis-pelajaran">
+                                          <option value="normatif">Normatif</option>
+                                          <option value="normatif">Muatan Lokal</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="table table-borderless table-striped show">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Kode Mata Pelajaran</th>
+                      <th scope="col">Mata Pelajaran</th>
+                      <th scope="col">Jenis Mata Pelajaran</th>
+                      <th scope="col" class="text-center">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th>MP2021</th>
+                      <td>Bahasa Indonesia</td>
+                      <td>Wajib</td>
+                      <td class="text-center text-nowrap">
+                        <!-- edit data -->
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropEditMapel">Edit Data</a>
+                        <a href="" type="button" class="mx-1 text-danger">Hapus Data</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <th>MP2021</th>
+                      <td>Matematik</td>
+                      <td>Wajib</td>
+                      <td class="text-center text-nowrap">
+                        <!-- edit data -->
+                        <a href="" type="button" class="mx-1" data-bs-toggle="modal" data-bs-target="#staticBackdropEditMapel">Edit Data</a>
+                        <a href="" type="button" class="mx-1 text-danger">Hapus Data</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="position-sticky top-100 text-center py-4 text-secondary">
+          <div class="footer">
+            <p class="copyright-year">Copyright <span>2023</span> - SDN Manisrejo 1</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="frontend/js/bootstrap.min.js"></script>
+    <script src="frontend/custom/js/app.js"></script>
+    <script src="frontend/custom/js/tab.js"></script>
+    <script src="frontend/custom/js/search-data.js"></script>
+  </body>
+</html>
